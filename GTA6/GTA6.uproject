@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{2119E29D-4F70-3493-64C7-D3B04CF14FA7}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "GTA6",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
