@@ -69,8 +69,8 @@ void AGTA6Character::SetupPlayerInputComponent(class UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AGTA6Character::LookUpAtRate);
 
 	// handle touch devices
-	PlayerInputComponent->BindTouch(IE_Pressed, this, &AGTA6Character::TouchStarted);
-	PlayerInputComponent->BindTouch(IE_Released, this, &AGTA6Character::TouchStopped);
+	//PlayerInputComponent->BindTouch(IE_Pressed, this, &AGTA6Character::TouchStarted);
+	//PlayerInputComponent->BindTouch(IE_Released, this, &AGTA6Character::TouchStopped);
 
 	// VR headset functionality
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AGTA6Character::OnResetVR);
@@ -84,12 +84,12 @@ void AGTA6Character::OnResetVR()
 
 void AGTA6Character::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
-		Jump();
+		//Jump();
 }
 
 void AGTA6Character::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 {
-		StopJumping();
+		//StopJumping();
 }
 
 void AGTA6Character::TurnAtRate(float Rate)
