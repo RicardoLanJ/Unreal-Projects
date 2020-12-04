@@ -6,6 +6,7 @@
 
 #include "GameFramework/HUD.h"
 #include "MyPlayerController.h"
+#include "MyPlayerState.h"
 
 AGTA6GameMode::AGTA6GameMode()
 {
@@ -19,5 +20,16 @@ AGTA6GameMode::AGTA6GameMode()
 	static ConstructorHelpers::FClassFinder<AHUD> StarBPClass(TEXT("/Game/ThirdPerson/star"));
 	HUDClass = StarBPClass.Class;
 
-	PlayerControllerClass = AMyPlayerController::StaticClass();
+	// PlayerControllerClass = AMyPlayerController::StaticClass();
+	static ConstructorHelpers::FClassFinder<AMyPlayerController> PlayerContollerBPClass(TEXT("/Game/ThirdPersonCPP/Blueprints/MyMyPlayerController"));
+	if (PlayerContollerBPClass.Class != NULL)
+	{
+		PlayerControllerClass = PlayerContollerBPClass.Class;
+	}
+
+	static ConstructorHelpers::FClassFinder<AMyPlayerState> PlayerStateBPClass(TEXT("/Game/ThirdPersonCPP/Blueprints/MyPlayerStateBP"));
+	if (PlayerStateBPClass.Class != NULL)
+	{
+		PlayerStateClass = PlayerStateBPClass.Class;
+	}
 }
