@@ -68,5 +68,8 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+	/**  Dead, Run on Server*/
+	void Dead_OnServer(AController* InstigateBy, AActor* DamageCauser);
 };
 

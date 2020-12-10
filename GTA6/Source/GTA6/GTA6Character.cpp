@@ -2,6 +2,7 @@
 
 #include "GTA6Character.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
+#include "MyPlayerState.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
@@ -131,4 +132,13 @@ void AGTA6Character::MoveRight(float Value)
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
+}
+void AGTA6Character::Dead_OnServer(AController* InstigateBy, AActor* DamageCauser)
+{
+	// killer add one kill
+	InstigateBy->GetPlayerState<AMyPlayerState>()->AddKillNum();
+
+	// I am dead
+	Controller->GetPlayerState<AMyPlayerState>()->AddOneDeathNum();
+
 }
