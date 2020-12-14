@@ -12,4 +12,8 @@ week1 apk and mp4 are in [release](https://github.com/RicardoLanJ/Unreal-Project
 
 第六周作业 网络同步 [release](https://github.com/RicardoLanJ/Unreal-Projects/releases/tag/v0.8)!
 
+第七周作业  AI [release](https://github.com/RicardoLanJ/Unreal-Projects/releases/tag/v0.9)!
+
 从蓝图迁移到c++，在c++的 [branch](https://github.com/RicardoLanJ/Unreal-Projects/tree/C++)
+
+实现的细节和说明都在release的说明里。某些[blog](https://zhuanlan.zhihu.com/p/295436946)
